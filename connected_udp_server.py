@@ -1,6 +1,8 @@
 from twisted.internet.protocol import DatagramProtocol
 from twisted.internet import reactor
 
+PORT = 8000
+
 
 class HelloWorldServer(DatagramProtocol):
 
@@ -11,5 +13,5 @@ class HelloWorldServer(DatagramProtocol):
 
 
 if __name__ == '__main__':
-    reactor.listenUDP(8000, HelloWorldServer())
+    reactor.listenUDP(PORT, HelloWorldServer())
     reactor.run()
