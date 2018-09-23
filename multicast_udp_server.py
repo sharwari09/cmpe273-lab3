@@ -17,7 +17,7 @@ class HelloWorldMulticastServer(DatagramProtocol):
 
     def datagramReceived(self, datagram, address):
         print("Datagram {} received from {}".format(datagram,address))
-        if datagram == b"Hello World":
+        if datagram == b"Hello from Client!":
             self.transport.write(b"Hello from Server!", address)
 
 
