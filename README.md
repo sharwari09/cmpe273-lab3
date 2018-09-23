@@ -51,7 +51,7 @@ Enter Group IP to join to : 228.0.0.5</br>
 Enter Server Port number: 9999</br>
 Setting TTL..</br>
 Joining Group..</br>
-Datagram b'Hello World' received from ('10.0.0.27', 9999)</br>
+Datagram b'Hello from Client!' received from ('10.0.0.27', 9999)</br>
 Datagram b'Hello from Server!' received from ('10.0.0.27', 9999)</br>
 
 
@@ -60,4 +60,4 @@ $ **python3.7 multicast_udp_client.py (On a remote machine, join a multicast gro
 Sharwaris-MacBook-Pro:cmpe273-lab3 sharwariphadnis$ python3.7 multicast_udp_client.py</br>
 Enter Group IP to join to : 228.0.0.5</br>
 Enter Server Port number: 9999</br>
-Datagram b'Hello World' received from ('10.0.0.27', 9999)
+Datagram b'Hello from Client!' received from ('10.0.0.27', 9999)
