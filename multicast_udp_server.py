@@ -10,7 +10,7 @@ class MulticastPingPong(DatagramProtocol):
         """
         self.transport.setTTL(5)
         print("Setting TTL..")
-        self.transport.joinGroup("202.0.0.2")
+        self.transport.joinGroup("228.0.0.5")
         print("Joining Group..")
 
     def datagramReceived(self, datagram, address):

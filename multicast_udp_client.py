@@ -5,8 +5,8 @@ from twisted.internet import reactor
 class MulticastPingClient(DatagramProtocol):
 
     def startProtocol(self):
-        self.transport.joinGroup("202.0.0.2")
-        self.transport.write(b'Hello World', ("202.0.0.2", 9999))
+        self.transport.joinGroup("228.0.0.5")
+        self.transport.write(b'Hello World', ("228.0.0.5", 9999))
 
     def datagramReceived(self, datagram, address):
         print("Datagram {} received from {}".format(datagram,address))
