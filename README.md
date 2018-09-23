@@ -46,7 +46,7 @@ received b'Hello World' from ('10.0.0.221', 8000)</br>
 
 $ **python3.7 multicast_udp_server.py (On one machine)**
 
-Sharwaris-MacBook-Pro:cmpe273-lab3 sharwariphadnis$ python3.7 multicast_udp_server.py 
+Sharwaris-MacBook-Pro:cmpe273-lab3 sharwariphadnis$ python3.7 multicast_udp_server.py </br>
 Enter Group IP to join to : 228.0.0.5</br>
 Enter Server Port number: 9999</br>
 Setting TTL..</br>
