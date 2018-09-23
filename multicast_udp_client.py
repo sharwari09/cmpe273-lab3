@@ -1,15 +1,21 @@
 from twisted.internet.protocol import DatagramProtocol
 from twisted.internet import reactor
 
+GROUP_IP = "228.0.0.5"
+PORT_NO = 9999
 
-class MulticastPingClient(DatagramProtocol):
+
+class HelloWorldMulticastClient(DatagramProtocol):
 
     def startProtocol(self):
-        self.transport.joinGroup("228.0.0.5")
-        self.transport.write(b'Hello World', ("228.0.0.5", 9999))
+        # Taking Group IP in the range of 224.0.0.0 to 239.255.255.255
+        self.transport.joinGroup(GROUP_IP)
+        self.transport.write(b'Hello World', (GROUP_IP, PORT_NO))
 
     def datagramReceived(self, datagram, address):
         print("Datagram {} received from {}".format(datagram,address))
 
-reactor.listenMulticast(9999, MulticastPingClient(), listenMultiple=True)
+
+reactor.listenMulticast(PORT_NO, HelloWorldMulticastClient(),
+                        listenMultiple=True)
 reactor.run()
